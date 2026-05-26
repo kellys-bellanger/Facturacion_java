@@ -9,6 +9,7 @@ import org.openxava.calculators.CurrentLocalDateCalculator;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.Collection;
 
 @Entity @Getter @Setter
 public class Factura {
@@ -35,6 +36,9 @@ public class Factura {
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
     Cliente cliente;
+
+    @ElementCollection
+    Collection<Detalle> detalles;
 
     @Stereotype("MEMO")
     String observaciones;
