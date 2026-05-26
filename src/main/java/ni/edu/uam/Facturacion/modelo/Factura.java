@@ -20,6 +20,7 @@ public class Factura {
     @Column(length = 32)
     String oid;
 
+    @DefaultValueCalculator(CurrentLocalDateCalculator.class)
     @Column(length = 4)
     int anyo;
 
@@ -31,6 +32,9 @@ public class Factura {
     @Required
     @DefaultValueCalculator(CurrentLocalDateCalculator.class)
     LocalDate fecha;
+
+    @ManyToOne(fetch = FetchType.LAZY, optional = false)
+    Cliente cliente;
 
     @Stereotype("MEMO")
     String observaciones;
