@@ -4,9 +4,7 @@ import lombok.Getter;
 import lombok.Setter;
 import org.openxava.annotations.Required;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 @Getter @Setter
@@ -19,4 +17,7 @@ public class Cliente {
     @Column(length=50)
     @Required
     String nombre;
+
+    @Embedded
+    Direccion direccion;
 }
