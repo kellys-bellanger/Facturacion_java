@@ -1,9 +1,2 @@
 /*C4*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C5*/SET SCHEMA PUBLIC
-alter table Cliente add column CodigoPostal varchar(5)
-alter table Cliente add column municipio varchar(20)
-alter table Cliente add column provincia varchar(30)
-alter table Cliente add column viaPublica varchar(30)
-INSERT INTO CLIENTE VALUES(88,'Federico Garcia ','7878','Valencia','Valencia','Avenida del Cid')
-COMMIT
