@@ -1,0 +1,7 @@
+/*C4*/SET SCHEMA PUBLIC
+DISCONNECT
+/*C5*/SET SCHEMA PUBLIC
+alter table Producto add column categoria_oid varchar(32)
+alter table Producto add constraint FKc81rcy0vfdn5ewnap5scabhd3 foreign key (categoria_oid) references Categoria
+INSERT INTO PRODUCTO VALUES(12,'Introduccion a JPA','402869819e650944019e650d36f40000')
+COMMIT
