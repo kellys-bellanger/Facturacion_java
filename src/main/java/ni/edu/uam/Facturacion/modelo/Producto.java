@@ -4,6 +4,8 @@ import javax.persistence.*;
 import org.openxava.annotations.*;
 import lombok.*;
 
+import java.math.BigDecimal;
+
 @Entity
 @Getter @Setter
 public class Producto {
@@ -24,5 +26,13 @@ public class Producto {
     @DescriptionsList
     Categoria categoria;
 
+    @Money
+    BigDecimal precio;
 
+    @Files
+    @Column(length = 32)
+    String fotos;
+
+    @TextArea
+    String observaciones;
 }

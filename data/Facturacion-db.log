@@ -1,7 +1,8 @@
-/*C4*/SET SCHEMA PUBLIC
+/*C3*/SET SCHEMA PUBLIC
 DISCONNECT
-/*C5*/SET SCHEMA PUBLIC
-alter table Producto add column categoria_oid varchar(32)
-alter table Producto add constraint FKc81rcy0vfdn5ewnap5scabhd3 foreign key (categoria_oid) references Categoria
-INSERT INTO PRODUCTO VALUES(12,'Introduccion a JPA','402869819e650944019e650d36f40000')
+/*C4*/SET SCHEMA PUBLIC
+alter table Producto add column fotos varchar(32)
+alter table Producto add column observaciones varchar(255)
+alter table Producto add column precio numeric(19,2)
+INSERT INTO PRODUCTO VALUES(15,'Aprende OpenXava','402869819e650944019e650d36f40000','654A13F3C0A8E901000000009C237AFE','',20.00)
 COMMIT
